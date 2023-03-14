@@ -1,0 +1,214 @@
+
+body{
+    background-color:darkkhaki;
+    /* Imagem para Fundo */
+    background-image:url('../imagens/ondas-abstratas.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 20px;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+/* Mudar a cor quando selecionado com o Mouse */
+/* h1::selection{
+    color: chocolate;
+    background-color: burlywood;
+} */
+
+h1, h2, h3, h4, h5 , h6{
+    font-family: 'Averia Gruesa Libre', cursive;
+}
+
+/* Formatação do Cabeçalho */
+
+header{
+    border-bottom: 1px solid #444;
+    height: 80px;
+}
+
+
+/* logotipo */
+header h1{
+    padding: 4px;
+    background-color:darkolivegreen;
+    color: #fff;
+    width: fit-content;
+    float: left;
+    
+}
+
+/* menu */
+
+nav{
+    width: 60%;
+    float: right;
+    
+}
+
+header nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav li{
+    display: inline-block;
+}
+
+header nav li a{
+    display: block;
+    padding: 8px;
+    margin: 0 8px 0 0;
+    background-color:olive;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    background-color: #fff;
+    color: darkseagreen;
+}
+main{
+    clear: both;
+}
+
+ aside, section{
+    border: 1px solid black;
+    padding: 10px;
+    background-color:aliceblue;
+ }
+
+
+aside{
+    width: 20%;
+    float: left;
+}
+
+section{
+    width: 75%;
+    float:right;
+}
+
+aside img{
+    width: 100%;
+}
+
+aside figure{
+    margin: 0;
+}
+
+aside, section{
+    margin-bottom: 4px;
+    margin-right:  4px;
+}
+
+footer{
+    clear: both;
+    border-top: 1px; color:#fff;
+}
+footer p{
+    text-align: center;
+}
+
+.fala{
+    font-style: italic;
+    font-weight: 600;
+}
+
+
+.popup{
+    position: fixed;
+    bottom: 20px;
+    right: -400px;
+    
+    width: 250px;
+    padding: 10px;
+    background-color:darkgoldenrod;
+    border: 4px #fff solid;
+    box-shadow: 3px 3px 3px #444;
+    
+}
+
+.slide-left {
+	-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-450px);
+              transform: translateX(-450px);
+    }
+  }
+  @keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-450px);
+              transform: translateX(-450px);
+    }
+  }
+  
+
+.fechar{
+    position: absolute;
+    right: -40px;
+    top: 0;
+    background-color: #900;
+    color: #fff;
+    padding:8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+
+/* Layout em celulares e tablets. (telas menores que 1200px) */
+@media screen and (max-width: 1199px) {
+    header{
+        height: 120px;
+    }
+    header h1, header nav, aside , section {
+        float: none;
+        width: 97%;
+    }
+    
+}
+
+@media screen and (max-width: 690px) {
+    header{
+        height: 200px;
+    }
+    
+    
+}
+
+/* Layout para Impressão */
+@media print{
+    /* define tamanho de leitura para 12pt */
+    body{
+        font-size: 10pt;
+    }
+    h1{
+        font-size: 16pt;
+    }
+    h2{
+        font-size: 14pt;
+    }
+    @page {
+    margin: 1cm;
+    size: A4;
+    }
+}
+
